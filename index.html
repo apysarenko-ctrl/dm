@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портрет студента Digital Marketing+AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#FF8856; --orange-soft:#FFE2D4;
+  --black:#000; --ink:#1B1B1B; --ink-2:#55534E; --ink-3:#8A8780;
+  --line:#E6E4DF; --line-2:#DAD7D0; --bg:#F2F1EE; --card:#FFFFFF; --track:#E6E4DF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Montserrat,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.display{font-family:Unbounded,Montserrat,sans-serif;text-transform:uppercase;font-weight:900;letter-spacing:.01em;line-height:1.1}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.pill{display:inline-block;background:var(--orange);color:#000;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:6px 14px}
+.muted{color:var(--ink-2)} .small{font-size:13px}
+
+/* HERO */
+.hero{position:relative;background:#000;color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:38%;background:var(--orange);clip-path:polygon(32% 0,100% 0,100% 100%,0 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:40px;padding-bottom:44px;min-height:440px;display:flex;flex-direction:column}
+.hero .logo{height:22px;width:auto;align-self:flex-start;margin-bottom:auto}
+.hero h1{font-size:clamp(34px,6vw,64px);margin:28px 0 18px;max-width:720px}
+.hero .lead{font-size:18px;color:#DAD7D0;max-width:560px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:32px;font-size:13px;color:#B9B6AF}
+.hero .meta b{color:#fff;font-weight:600}
+.hero .tag{position:absolute;right:24px;bottom:44px;z-index:1;text-align:right;font-family:Unbounded,sans-serif;font-weight:900;text-transform:uppercase;font-size:14px;color:#000;line-height:1.3}
+
+section{padding:64px 0 8px}
+section h2{font-size:clamp(24px,3.4vw,34px);margin-bottom:28px}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border-radius:8px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.04)}
+.card.dark{background:#000;color:#fff}
+.card.orange{background:var(--orange);color:#000}
+.card h3{font-size:15px;margin-bottom:14px}
+
+/* PERSONA */
+.persona{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.persona .story{font-size:19px;line-height:1.6}
+.persona .story strong{color:var(--orange);font-weight:700}
+.persona .who{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-family:Unbounded,sans-serif;font-weight:900;font-size:22px;color:#000;flex:none}
+.who .name{font-family:Unbounded,sans-serif;font-weight:900;text-transform:uppercase;font-size:18px;line-height:1.2}
+.who .sub{color:#B9B6AF;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.kpi .num{font-family:Unbounded,sans-serif;font-weight:900;font-size:38px;line-height:1;color:var(--orange);margin-bottom:8px}
+.card.orange .num{color:#000}
+.kpi .lbl{font-size:13px;color:var(--ink-2);line-height:1.4}
+.card.orange .lbl{color:#000}
+
+/* BARS */
+.bars{display:flex;flex-direction:column;gap:12px}
+.bar .top{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:5px}
+.bar .top span:last-child{color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bar .top b{font-weight:700;color:var(--ink)}
+.track{height:10px;background:var(--track);border-radius:5px;overflow:hidden}
+.fill{height:100%;background:var(--ink);border-radius:5px}
+.fill.hi{background:var(--orange)}
+.note{margin-top:16px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:12px}
+
+.callout{display:flex;gap:20px;align-items:center}
+.callout .num{font-family:Unbounded,sans-serif;font-weight:900;font-size:52px;color:var(--orange);line-height:1;flex:none}
+
+/* THEMES & QUOTES */
+.theme{display:flex;gap:14px;align-items:flex-start}
+.theme .n{font-family:Unbounded,sans-serif;font-weight:900;font-size:28px;color:var(--orange);line-height:1;min-width:52px}
+.theme h3{font-size:14px;margin-bottom:6px}
+.theme p{font-size:14px;color:var(--ink-2)}
+.quotes{columns:3;column-gap:16px}
+.quote{break-inside:avoid;margin-bottom:16px;background:var(--card);border-radius:8px;padding:20px 20px 16px;border-left:3px solid var(--orange);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.quote p{font-size:15px;line-height:1.5}
+.quote p::before{content:"“";font-family:Unbounded,sans-serif;font-weight:900;color:var(--orange);margin-right:2px}
+.quote p::after{content:"”";color:var(--orange)}
+.quote .src{margin-top:10px;font-size:12px;color:var(--ink-3);letter-spacing:.02em}
+.quote.dark{background:#000;color:#fff;border-left-color:var(--orange)}
+.quote.dark .src{color:#B9B6AF}
+.money{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.money span{background:var(--orange-soft);color:#000;font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px}
+
+/* RECS */
+.rec h3{font-size:16px;margin:4px 0 14px;display:flex;align-items:center;gap:10px}
+.rec h3 .idx{font-size:13px;color:var(--orange)}
+.rec ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.rec li{position:relative;padding-left:22px;font-size:14px;line-height:1.5}
+.rec li::before{content:"✓";position:absolute;left:0;top:0;color:var(--orange);font-weight:700}
+.rec li b{font-weight:700}
+.rec .why{display:block;color:var(--ink-3);font-size:12.5px;margin-top:2px}
+
+footer{margin-top:64px;padding:28px 0 40px;border-top:1px solid var(--line-2)}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+footer .logo{height:18px;width:auto}
+footer p{font-size:12.5px;color:var(--ink-3);max-width:760px}
+
+@media (max-width:900px){
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .persona{grid-template-columns:1fr}
+  .quotes{columns:2}
+}
+@media (max-width:620px){
+  .wrap{padding:0 16px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .quotes{columns:1}
+  .hero::after{width:100%;top:auto;height:10px;clip-path:none}
+  .hero .tag{display:none}
+  .hero .wrap{min-height:0}
+  .kpi .num{font-size:32px}
+  .callout{flex-direction:column;align-items:flex-start;gap:8px}
+  section{padding-top:48px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="data:image/png;base64,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" alt="GoIT">
+    <div style="margin-top:56px"><span class="pill">Digital Marketing+AI</span></div>
+    <h1>Портрет студента</h1>
+    <p class="lead">Хто приходить на курс, з якими цілями й обмеженнями, і що це означає для програми, маркетингу, викладачів та менторів.</p>
+    <div class="meta">
+      <span>Група <b>AI Digital Marketing 2</b></span>
+      <span>Анкет <b>21</b></span>
+      <span>Опитування <b>27–29.10.2026</b></span>
+      <span>Для <b>внутрішнього використання</b></span>
+    </div>
+  </div>
+  <div class="tag">Вхідне<br>опитування</div>
+</header>
+
+<main>
+
+<!-- PERSONA -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Узагальнений профіль</div>
+    <h2>Середній студент</h2>
+    <div class="persona">
+      <div class="card dark">
+        <div class="who">
+          <div class="avatar">32</div>
+          <div>
+            <div class="name">Жінка, 32 роки</div>
+            <div class="sub">Працює повний день · вчиться ввечері</div>
+          </div>
+        </div>
+        <p class="story">Живе в Україні або вже в ЄС. Працює в іншій сфері, але з маркетингом <strong>трохи стикалася</strong>: вела Instagram, робила SMM для свого чи чужого проєкту. Прийшла, щоб <strong>змінити професію</strong> і вийти на <strong>віддалену роботу зі стабільним доходом</strong>, який не залежить від країни. На навчання має <strong>близько 2 годин на день</strong>, англійська на рівні нижче Intermediate. Про GoIT дізналася з <strong>реклами в соцмережах</strong>. Успіх для неї — портфоліо і перша робота чи замовник, а не сертифікат.</p>
+      </div>
+      <div class="kpis">
+        <div class="card kpi orange"><div class="num">81%</div><div class="lbl">жінки<br><span class="small">17 з 21 (за іменами)</span></div></div>
+        <div class="card kpi"><div class="num">86%</div><div class="lbl">зараз працюють: повний день, частково чи на фрилансі (18 з 21)</div></div>
+        <div class="card kpi"><div class="num">52%</div><div class="lbl">прийшли змінити професію (11 з 21)</div></div>
+        <div class="card kpi"><div class="num">71%</div><div class="lbl">мають до 2 годин на день на навчання (15 з 21)</div></div>
+        <div class="card kpi"><div class="num">52%</div><div class="lbl">англійська нижче Intermediate (11 з 21)</div></div>
+        <div class="card kpi"><div class="num">57%</div><div class="lbl">прийшли з реклами в соцмережах (12 з 21)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Хто вони</div>
+    <h2>Вік, країна, зайнятість</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Вік</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>17–20</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>21–29</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>30–39</span><span><b>9</b> · 43%</span></div><div class="track"><div class="fill hi" style="width:43%"></div></div></div>
+          <div class="bar"><div class="top"><span>40–52</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+        </div>
+        <p class="note">Медіана 32, середній 31,7. Діапазон від 17 до 52: троє студентів неповнолітні.</p>
+      </div>
+      <div class="card">
+        <h3>Країна перебування</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Україна</span><span><b>12</b> · 57%</span></div><div class="track"><div class="fill hi" style="width:57%"></div></div></div>
+          <div class="bar"><div class="top"><span>Латвія</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+          <div class="bar"><div class="top"><span>Інші країни, по 1: Німеччина, Польща, Австрія, Італія, Словенія, Велика Британія, Канада</span><span><b>7</b> · 33%</span></div><div class="track"><div class="fill" style="width:33%"></div></div></div>
+        </div>
+        <p class="note">43% уже за кордоном. Ще двоє з України переїжджають (до Німеччини й Таїланду), одна студентка живе між Україною та Угорщиною.</p>
+      </div>
+      <div class="card">
+        <h3>Зайнятість</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Повна зайнятість</span><span><b>10</b> · 48%</span></div><div class="track"><div class="fill hi" style="width:48%"></div></div></div>
+          <div class="bar"><div class="top"><span>Часткова</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Фриланс</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Тимчасово не працюють</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+        </div>
+        <p class="note">Професії дуже різні: HR, лікарка, кухарка, вчителька англійської, фотографка, директорка радіо, UI/UX, музичний продюсер, Head of Marketing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STARTING POINT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">З чим приходять</div>
+    <h2>Мета, досвід, англійська</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Основна мета</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Змінити професію</span><span><b>11</b> · 52%</span></div><div class="track"><div class="fill hi" style="width:52%"></div></div></div>
+          <div class="bar"><div class="top"><span>Просувати власний бізнес чи проєкт</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Розширити послуги на фрилансі</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+          <div class="bar"><div class="top"><span>Зростання на поточній роботі</span><span><b>1</b> · 5%</span></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
+          <div class="bar"><div class="top"><span>Інше</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+        </div>
+        <p class="note">«Інше» — керівниця маркетингу, якій треба розуміти роботу команди, і люди, що хочуть розібратися в AI-інструментах.</p>
+      </div>
+      <div class="card">
+        <h3>Досвід у Digital Marketing</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Починаю з нуля</span><span><b>8</b> · 38%</span></div><div class="track"><div class="fill hi" style="width:38%"></div></div></div>
+          <div class="bar"><div class="top"><span>Досвід в окремих напрямках</span><span><b>6</b> · 29%</span></div><div class="track"><div class="fill" style="width:29%"></div></div></div>
+          <div class="bar"><div class="top"><span>Базові знання, мало практики</span><span><b>5</b> · 24%</span></div><div class="track"><div class="fill" style="width:24%"></div></div></div>
+          <div class="bar"><div class="top"><span>Не вказали</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+        </div>
+        <p class="note">Найчастіший наявний досвід — SMM. Поруч у групі сидять людина з 9 роками SMM і людина без жодного досвіду.</p>
+      </div>
+      <div class="card">
+        <h3>Рівень англійської</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Beginner</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill hi" style="width:10%"></div></div></div>
+          <div class="bar"><div class="top"><span>Elementary</span><span><b>5</b> · 24%</span></div><div class="track"><div class="fill hi" style="width:24%"></div></div></div>
+          <div class="bar"><div class="top"><span>Pre-Intermediate</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill hi" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Intermediate</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Upper-Intermediate</span><span><b>4</b> · 19%</span></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+          <div class="bar"><div class="top"><span>Advanced</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+        </div>
+        <p class="note">Помаранчевим — нижче Intermediate: 11 з 21. Інтерфейси Meta Ads, Google Ads та AI-інструментів для них бар'єр.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIME -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Ресурс часу</div>
+    <h2>Скільки часу є на навчання</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Годин на навчання в день</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Менше 2 годин</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill hi" style="width:14%"></div></div></div>
+          <div class="bar"><div class="top"><span>2 години</span><span><b>12</b> · 57%</span></div><div class="track"><div class="fill hi" style="width:57%"></div></div></div>
+          <div class="bar"><div class="top"><span>2–4 години</span><span><b>5</b> · 24%</span></div><div class="track"><div class="fill" style="width:24%"></div></div></div>
+          <div class="bar"><div class="top"><span>4–6 годин</span><span><b>1</b> · 5%</span></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Годин роботи на тиждень</h3>
+        <div class="bars">
+          <div class="bar"><div class="top"><span>До 20</span><span><b>8</b> · 38%</span></div><div class="track"><div class="fill" style="width:38%"></div></div></div>
+          <div class="bar"><div class="top"><span>20–30</span><span><b>1</b> · 5%</span></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
+          <div class="bar"><div class="top"><span>31–40</span><span><b>6</b> · 29%</span></div><div class="track"><div class="fill hi" style="width:29%"></div></div></div>
+          <div class="bar"><div class="top"><span>Понад 40</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill hi" style="width:14%"></div></div></div>
+          <div class="bar"><div class="top"><span>Не працюють</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+        </div>
+      </div>
+      <div class="card dark">
+        <h3 style="color:var(--orange)">Група ризику</h3>
+        <div class="callout">
+          <div class="num">9</div>
+          <p>студентів працюють повний день і мають на навчання 2 години або менше. Це 43% групи — саме тут найімовірніший відвал на перших дедлайнах.</p>
+        </div>
+        <p class="note" style="color:#B9B6AF;border-color:#2C2C2C">Серед них мама чотирьох дітей, лікарка перед переїздом за кордон і кухарка з 40+ годинами роботи на тиждень.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Канали</div>
+    <h2>Звідки дізналися про GoIT</h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="bars">
+          <div class="bar"><div class="top"><span>Реклама в соцмережах (Instagram, Facebook, TikTok, Telegram)</span><span><b>12</b> · 57%</span></div><div class="track"><div class="fill hi" style="width:57%"></div></div></div>
+          <div class="bar"><div class="top"><span>Пошукова реклама Google</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+          <div class="bar"><div class="top"><span>Рекомендація друзів, родини</span><span><b>3</b> · 14%</span></div><div class="track"><div class="fill" style="width:14%"></div></div></div>
+          <div class="bar"><div class="top"><span>Вже навчалися в екосистемі BetterED</span><span><b>2</b> · 10%</span></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+          <div class="bar"><div class="top"><span>Матеріал у медіа</span><span><b>1</b> · 5%</span></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
+        </div>
+      </div>
+      <div class="card orange">
+        <h3>Що це говорить про воронку</h3>
+        <p style="margin-bottom:12px">Курс продає соцреклама: понад половина групи прийшла саме звідти. Рекомендації та повторні покупки разом дають чверть групи (5 з 21) — тепла база, яка конвертується без реклами.</p>
+        <p>Ті, хто прийшов із Google, — люди, що вже свідомо шукали навчання: лікарка, фотографка, SMM-ниця з власним брендом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Очікування</div>
+    <h2>Що для них означає успіх</h2>
+    <div class="grid g4" style="margin-bottom:16px">
+      <div class="card theme"><div class="n">12</div><div><h3>Робота і дохід</h3><p>Віддалена робота, перший оффер, вищий чек на фрилансі.</p></div></div>
+      <div class="card theme"><div class="n">7</div><div><h3>Практика і портфоліо</h3><p>Реальні кейси, які можна показати роботодавцю чи клієнту.</p></div></div>
+      <div class="card theme"><div class="n">4</div><div><h3>Свій бізнес</h3><p>Кондитерська, ювелірна справа, музика, сімейні проєкти.</p></div></div>
+      <div class="card theme"><div class="n">4</div><div><h3>Розуміння системи</h3><p>Як усе працює, які метрики, як застосовувати AI-інструменти.</p></div></div>
+    </div>
+    <p class="muted small" style="margin-bottom:24px">Кількість анкет, де тема згадується у відповіді про успіх або в розповіді про себе. Одна анкета може мати кілька тем.</p>
+
+    <div class="card" style="margin-bottom:24px">
+      <h3>Зарплатні очікування, які назвали прямо</h3>
+      <div class="money"><span>від 50 000 грн</span><span>$1 500–2 000</span><span>від €1 200–1 500</span></div>
+      <p class="note">Очікування вищі за типовий junior-рівень. Обидві студентки, які назвали суму, вже мають досвід у маркетингу або SEO.</p>
+    </div>
+
+    <div class="quotes">
+      <div class="quote dark"><p>Для меня критично важно получить качественные знания которые помогут устроиться на удаленную работу в сфере Digital Marketing</p><div class="src">30 · Латвія · кухарка, 40+ год/тиждень</div></div>
+      <div class="quote"><p>отримати реальні практичні навички та створити портфоліо, щоб після завершення навчання впевнено вийти на німецький ринок праці й претендувати на junior-позицію або стажування</p><div class="src">27 · Німеччина · магістр Digital Marketing, ex-Amazon</div></div>
+      <div class="quote"><p>Оффер або практичний досвід роботи!</p><div class="src">32 · Латвія · тимчасово не працює</div></div>
+      <div class="quote"><p>хочу перейти к удалённой работе и иметь стабильный доход, не зависящий от места проживания</p><div class="src">35 · Італія · фотографка-ретушерка</div></div>
+      <div class="quote dark"><p>Мені потрібно розуміння що роблять співробітники digital marketing, які метрики до них застосовуються та як зрозуміти обсяг робіт</p><div class="src">46 · Україна · Head of Marketing</div></div>
+      <div class="quote"><p>я хочу отримати свою першу тисячу слухачів на стримінгових платформах</p><div class="src">17 · Україна · музичний продюсер</div></div>
+      <div class="quote"><p>Смогу увеличить свой чек, предоставлять больше услуг и брать лучше проекты или поменять работу</p><div class="src">28 · Україна · 9 років у SMM, свій бренд свічок</div></div>
+      <div class="quote"><p>Те що я маю сильни навчики щоб переїти в цю професію, та мати проекти і вже перниших замовників, або співбесиді.</p><div class="src">22 · Канада · UI/UX на фрилансі, підробляє баристою</div></div>
+      <div class="quote"><p>го ту маркет стратегія, повністю запакована з сайтом і соц мережами</p><div class="src">46 · Словенія · senior SEO, зараз кондитерка</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BARRIERS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Бар'єри</div>
+    <h2>Чого бояться і що заважає</h2>
+    <div class="grid g4" style="margin-bottom:24px">
+      <div class="card"><h3>Час</h3><p class="small muted">Повна зайнятість, діти, звітність наприкінці року. Навчання — це вечір після роботи.</p></div>
+      <div class="card"><h3>Складність інструментів</h3><p class="small muted">Страх не впоратися з програмами й рекламними кабінетами, особливо в тих, хто починає з нуля.</p></div>
+      <div class="card"><h3>Перший контакт онлайн</h3><p class="small muted">Соціофобія, складно знайомитися через екран, без міміки й жестів.</p></div>
+      <div class="card"><h3>Вік і ринок</h3><p class="small muted">Досвідчені студенти 40+ уже стикалися з відмовами й падінням зарплат на ринку.</p></div>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>Але хвилююся щодо складності освоєння програм. Та нічого, налаштована позитивно та рішуче:)</p><div class="src">30 · Україна · директорка радіо</div></div>
+      <div class="quote dark"><p>Шукала роботу в діджитал-маркетингу та в SEO більше ніж 2 роки… підозрюю, що причина в віці, а також в зниженні середніх зп по ринку</p><div class="src">46 · Словенія · дві дитини, статус біженки</div></div>
+      <div class="quote"><p>Трішки наявна соціофобія, но хотілось би побороти це 😅</p><div class="src">17 · Україна / Угорщина · продавчиня, веде Instagram магазину</div></div>
+      <div class="quote"><p>важко йду на перший контакт, особливо в онлайн форматі (напевно звикла до сприйняття міміки та жестів віч на віч)</p><div class="src">29 · Україна → Таїланд · лікарка</div></div>
+      <div class="quote"><p>Рівень англійської дуже поганий. Але зараз не маю можливості зосереджуватись на навчанні мови.</p><div class="src">33 · Україна · мама чотирьох дітей, маркетинг сімейного бізнесу</div></div>
+      <div class="quote"><p>Наразі маю дуже обмежену кількість "вільного" часу.</p><div class="src">44 · Австрія · маркетинг у нерухомості</div></div>
+      <div class="quote"><p>Очень много работаю, поэтому буду очень стараться идти в ногу с группой.</p><div class="src">30 · Латвія · кухарка</div></div>
+      <div class="quote dark"><p>Маю велику необхідність освоїти сучасні інструменти маркетингу, щоб залишатися конкурентною на ринку праці, а також власним прикладом показати сину, що навчатися та здобувати нові навички ніколи не пізно.</p><div class="src">52 · Велика Британія · ЗЕД, торгівля</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Висновки</div>
+    <h2>Що це означає для команди</h2>
+    <div class="grid g2">
+      <div class="card rec">
+        <h3><span class="idx">01</span> Програма і методологія</h3>
+        <ul>
+          <li><b>Дробити навчання на блоки по 30–40 хвилин</b>, щоб тиждень проходився за 2 години на день.<span class="why">71% мають до 2 годин на день.</span></li>
+          <li><b>Будувати портфоліо з першого модуля</b>, а не фінальним проєктом: кожна ДЗ — артефакт, який можна показати.<span class="why">Портфоліо і практика — друга за частотою тема успіху.</span></li>
+          <li><b>Дати опцію виконувати ДЗ на власному проєкті</b>: кондитерська, свічки, ювелірка, музика, сімейний бізнес.<span class="why">Кожен п'ятий прийшов просувати свою справу.</span></li>
+          <li><b>Глосарій і українські підказки до англомовних інтерфейсів</b> Meta Ads, Google Ads, AI-інструментів.<span class="why">Половина групи нижче Intermediate.</span></li>
+          <li><b>Подвійний рівень складності</b> в практиці: базове завдання + «зірочка» для тих, хто вже в SMM.<span class="why">У групі одночасно 9 років SMM і нуль досвіду.</span></li>
+        </ul>
+      </div>
+      <div class="card rec">
+        <h3><span class="idx">02</span> Маркетинг і продажі</h3>
+        <ul>
+          <li><b>Головний меседж — «нова професія + віддалена робота + дохід, що не залежить від країни»</b>.<span class="why">Саме так формулюють мету ті, хто змінює професію, і ті, хто живе за кордоном.</span></li>
+          <li><b>Окремий сегмент — українці за кордоном</b> з креативами під їхню ситуацію: робота в ЄС, нестабільна локальна зайнятість.<span class="why">43% групи вже за кордоном, ще двоє переїжджають.</span></li>
+          <li><b>Окремий сегмент — власники малого бізнесу</b> з офером «навчитися просувати свою справу».<span class="why">4 з 21 прийшли саме з цим.</span></li>
+          <li><b>Чесно говорити про формат</b>: скільки годин на тиждень потрібно і як поєднати з повною зайнятістю.<span class="why">Майже половина працює повний день і має ≤2 години.</span></li>
+          <li><b>Не обіцяти $1 500+ одразу після курсу.</b> Завищені очікування бачимо вже на вході; краще продавати шлях до першого кейсу і першого оффера.</li>
+          <li><b>Посилити реферальну механіку</b> і повторні продажі в BetterED.<span class="why">Рекомендації й випускники — 24% групи без витрат на рекламу.</span></li>
+        </ul>
+      </div>
+      <div class="card rec">
+        <h3><span class="idx">03</span> Викладач</h3>
+        <ul>
+          <li><b>Пояснювати через SMM і соцмережі</b> як точку входу, а далі розширювати до performance і аналітики.<span class="why">Це найчастіший наявний досвід і головний канал, з якого прийшли самі студенти.</span></li>
+          <li><b>Показувати інструменти «з екрана»</b>, крок за кроком, з перекладом ключових кнопок і термінів.<span class="why">Страх «складних програм» і слабка англійська.</span></li>
+          <li><b>Брати приклади з малого бізнесу</b>, а не з великих брендів: кав'ярня, фотограф, хендмейд.<span class="why">Це реальні контексти студентів.</span></li>
+          <li><b>Показувати AI як прискорювач</b> для тих, у кого мало часу: що можна делегувати AI вже після першого заняття.</li>
+          <li><b>Давати записи з таймкодами</b>, щоб можна було переглянути частинами після роботи.</li>
+        </ul>
+      </div>
+      <div class="card rec">
+        <h3><span class="idx">04</span> Ментор</h3>
+        <ul>
+          <li><b>Особистий check-in у перший тиждень</b> з 9 студентами з групи ризику: повна зайнятість + ≤2 години на день.<span class="why">Тут найімовірніший відвал на перших дедлайнах.</span></li>
+          <li><b>М'яко заводити в спільноту</b> тих, кому складно з першим контактом онлайн: писати першим, давати прості ролі в групових активностях.</li>
+          <li><b>Проговорити очікування щодо доходу</b> на старті: що реально через 3–6 місяців після курсу і що для цього потрібно в портфоліо.</li>
+          <li><b>Підтримувати досвідчених 40+</b>, які вже мали відмови: фокус на тому, як їхній досвід стає перевагою.</li>
+          <li><b>Враховувати трьох неповнолітніх</b> у групі: тон спілкування, теми, ліміти щодо працевлаштування.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="data:image/png;base64,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" alt="GoIT">
+    <p>Джерело: вхідне опитування групи AI Digital Marketing 2, 21 анкета, 27–29.10.2026. Відповіді в експорті не були прив'язані до колонок, тому їх розкладено по питаннях за змістом. Стать визначено за іменами. Одна вибірка з однієї групи: цифри показують тенденції, а не статистично значущі частки. Цитати наведено дослівно, без імен. Digital Marketing+AI · Портрет студента.</p>
+  </div>
+</footer>
+
+</body>
+</html>
